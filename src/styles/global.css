@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-linen text-ink font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    @apply text-xs uppercase tracking-widest2 text-stone font-medium;
+  }
+  .container-page {
+    @apply mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16;
+  }
+}

@@ -1,0 +1,138 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+locale: "pl"
+
+collections:
+  - name: "site"
+    label: "Ustawienia strony"
+    files:
+      - name: "site"
+        label: "Nawigacja i dane ogólne"
+        file: "src/data/site.json"
+        fields:
+          - { label: "Nazwa marki", name: "brandName", widget: "string" }
+          - { label: "Hasło marki", name: "tagline", widget: "string" }
+          - { label: "Opis SEO", name: "seoDescription", widget: "text" }
+          - { label: "Etykieta lokalizacji (header)", name: "locationLabel", widget: "string" }
+          - label: "Nawigacja"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "Etykieta", name: "label", widget: "string" }
+              - { label: "Link (#sekcja lub /podstrona)", name: "href", widget: "string" }
+          - label: "Stopka"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Tekst copyright", name: "copyright", widget: "string" }
+              - label: "Linki"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Etykieta", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+
+      - name: "hero"
+        label: "Sekcja Hero (górna, pierwsza)"
+        file: "src/data/hero.json"
+        fields:
+          - { label: "Nadtytuł (2 linijki)", name: "eyebrow", widget: "text" }
+          - { label: "Nagłówek (2 linijki)", name: "headline", widget: "text" }
+          - { label: "Opis", name: "description", widget: "text" }
+          - { label: "Tekst przycisku CTA", name: "ctaLabel", widget: "string" }
+          - { label: "Link przycisku CTA", name: "ctaHref", widget: "string" }
+          - { label: "Zdjęcie", name: "image", widget: "image" }
+          - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
+          - label: "Plakietka na zdjęciu"
+            name: "badge"
+            widget: "object"
+            fields:
+              - label: "Linijki tekstu"
+                name: "lines"
+                widget: "list"
+                field: { label: "Linia", name: "line", widget: "string" }
+          - label: "Numeracja slajdów"
+            name: "slides"
+            widget: "list"
+            field: { label: "Numer", name: "value", widget: "string" }
+
+      - name: "categories"
+        label: "Kategorie produktowe (4 kafelki)"
+        file: "src/data/categories.json"
+        fields:
+          - label: "Kategorie"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID (bez spacji, jak w nawigacji)", name: "id", widget: "string" }
+              - { label: "Tytuł", name: "title", widget: "string" }
+              - { label: "Podtytuł", name: "subtitle", widget: "string" }
+              - { label: "Zdjęcie", name: "image", widget: "image" }
+              - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
+
+      - name: "brand"
+        label: "Sekcja O firmie / rzemiośle"
+        file: "src/data/brand.json"
+        fields:
+          - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
+          - { label: "Nagłówek (wiele linii)", name: "heading", widget: "text" }
+          - { label: "Akapit", name: "paragraph", widget: "text" }
+          - { label: "Tekst przycisku CTA", name: "ctaLabel", widget: "string" }
+          - { label: "Link przycisku CTA", name: "ctaHref", widget: "string" }
+          - { label: "Duże zdjęcie", name: "mainImage", widget: "image" }
+          - { label: "Tekst alternatywny dużego zdjęcia", name: "mainImageAlt", widget: "string" }
+          - label: "Boczna notka"
+            name: "side"
+            widget: "object"
+            fields:
+              - { label: "Numer", name: "number", widget: "string" }
+              - { label: "Nagłówek (wiele linii)", name: "heading", widget: "text" }
+              - { label: "Małe zdjęcie", name: "image", widget: "image" }
+              - { label: "Tekst alternatywny małego zdjęcia", name: "imageAlt", widget: "string" }
+              - { label: "Tekst", name: "text", widget: "text" }
+
+      - name: "process"
+        label: "Sekcja procesu (5 kroków)"
+        file: "src/data/process.json"
+        fields:
+          - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
+          - { label: "Nagłówek", name: "heading", widget: "string" }
+          - label: "Kroki"
+            name: "steps"
+            widget: "list"
+            fields:
+              - { label: "Numer", name: "number", widget: "string" }
+              - label: "Ikona"
+                name: "icon"
+                widget: "select"
+                options: ["chat", "pencil", "cube", "gear", "truck"]
+              - { label: "Tytuł", name: "title", widget: "string" }
+              - { label: "Opis", name: "description", widget: "text" }
+
+      - name: "contact"
+        label: "Sekcja kontaktowa"
+        file: "src/data/contact.json"
+        fields:
+          - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
+          - { label: "Nagłówek (2 linie)", name: "heading", widget: "text" }
+          - { label: "Akapit", name: "paragraph", widget: "text" }
+          - { label: "Tekst przycisku CTA", name: "ctaLabel", widget: "string" }
+          - { label: "Link przycisku CTA (np. tel:+48...)", name: "ctaHref", widget: "string" }
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "E-mail", name: "email", widget: "string" }
+          - { label: "Lokalizacja", name: "location", widget: "string" }
+          - label: "Godziny otwarcia"
+            name: "hours"
+            widget: "list"
+            fields:
+              - { label: "Dni", name: "days", widget: "string" }
+              - { label: "Godziny", name: "hours", widget: "string" }
+          - { label: "Zdjęcie", name: "image", widget: "image" }
+          - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }

@@ -1,0 +1,13 @@
+{
+  "eyebrow": "Meble, które tworzą\nlepsze dni.",
+  "headline": "Przestrzeń ma\nznaczenie.",
+  "description": "Projektujemy i tworzymy meble na wymiar, które naturalnie wpisują się w Twoje życie. Funkcjonalne wnętrza. Rzemiosło. Trwałość.",
+  "ctaLabel": "Zobacz realizacje",
+  "ctaHref": "#realizacje",
+  "image": "/images/hero/hero-kitchen.jpg",
+  "imageAlt": "Nowoczesna, jasna kuchnia na wymiar z wyspą i barkiem",
+  "badge": {
+    "lines": ["KUCHNIE", "ZABUDOWY", "MEBLE", "PRZESTRZENIE", "DOPASOWANE", "DO CIEBIE."]
+  },
+  "slides": ["01", "02", "03"]
+}

@@ -1,0 +1,42 @@
+---
+import hero from '../data/hero.json';
+---
+
+<section id="top" class="container-page pt-12 sm:pt-16 pb-16 sm:pb-20">
+  <div class="grid lg:grid-cols-[minmax(0,420px)_1fr] gap-8 lg:gap-6 items-stretch">
+    <div class="flex flex-col justify-center gap-6 py-4">
+      <p class="eyebrow whitespace-pre-line">{hero.eyebrow}</p>
+      <h1 class="font-serif text-5xl sm:text-6xl leading-[1.05] text-ink whitespace-pre-line">
+        {hero.headline}
+      </h1>
+      <p class="text-ink/70 max-w-sm leading-relaxed">{hero.description}</p>
+      <a
+        href={hero.ctaHref}
+        class="inline-flex items-center gap-3 bg-ink text-linen px-6 py-4 text-xs tracking-widest2 uppercase w-fit hover:bg-bark transition-colors"
+      >
+        {hero.ctaLabel}
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+
+      <div class="flex flex-col gap-1.5 pt-6 text-xs text-stone">
+        {hero.slides.map((s, i) => (
+          <div class="flex items-center gap-3">
+            <span class={i === 0 ? 'text-ink' : ''}>{s}</span>
+            <span class={`h-px ${i === 0 ? 'w-8 bg-ink' : 'w-4 bg-stone/40'}`}></span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="relative min-h-[360px] sm:min-h-[480px] lg:min-h-[520px]">
+      <img
+        src={hero.image}
+        alt={hero.imageAlt}
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute bottom-0 right-0 bg-ink/70 backdrop-blur-sm text-linen px-6 py-6 text-[11px] tracking-widest2 leading-relaxed hidden sm:block">
+        {hero.badge.lines.map((line) => <span class="block">{line}</span>)}
+      </div>
+    </div>
+  </div>
+</section>

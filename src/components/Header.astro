@@ -1,0 +1,71 @@
+---
+import site from '../data/site.json';
+---
+
+<header class="sticky top-0 z-50 bg-linen/95 backdrop-blur border-b border-ink/5">
+  <div class="container-page flex items-center justify-between h-20">
+    <a href="#top" class="flex items-center gap-3 shrink-0">
+      <img
+        src="/images/logo/symbol.png"
+        alt={`${site.brandName} — symbol`}
+        class="h-10 w-10 object-contain"
+      />
+      <span class="leading-tight">
+        <span class="block font-sans font-semibold tracking-wide text-sm sm:text-base text-ink">
+          {site.brandName.toUpperCase()}
+        </span>
+        <span class="block font-sans text-[10px] sm:text-xs tracking-widest2 text-stone">
+          {site.tagline.toUpperCase()}
+        </span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7">
+      {site.nav.map((item) => (
+        <a
+          href={item.href}
+          class="text-xs tracking-wide text-ink/80 hover:text-bark transition-colors whitespace-nowrap"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="hidden md:flex items-center gap-2 text-xs text-stone shrink-0">
+      <span class="h-px w-6 bg-stone/50"></span>
+      <span>{site.locationLabel}</span>
+    </div>
+
+    <button
+      id="menu-toggle"
+      class="lg:hidden inline-flex flex-col justify-center gap-1.5 h-8 w-8"
+      aria-label="Otwórz menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="block h-px w-6 bg-ink"></span>
+      <span class="block h-px w-6 bg-ink"></span>
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="hidden lg:hidden border-t border-ink/5 bg-linen">
+    <div class="container-page flex flex-col py-4 gap-4">
+      {site.nav.map((item) => (
+        <a href={item.href} class="text-sm text-ink/80 hover:text-bark">
+          {item.label}
+        </a>
+      ))}
+      <span class="text-xs text-stone pt-2 border-t border-ink/5">{site.locationLabel}</span>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.contains('hidden') === false;
+    menu?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

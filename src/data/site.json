@@ -1,0 +1,22 @@
+{
+  "brandName": "Becker Mebel",
+  "tagline": "Meble na wymiar",
+  "seoDescription": "Meble i zabudowy na wymiar w Poznaniu, Mosinie i okolicach. Kuchnie, szafy i garderoby, zabudowy wnętrz — od pomiaru i projektu po wykonanie i montaż.",
+  "locationLabel": "Poznań i okolice",
+  "nav": [
+    { "label": "Kuchnie", "href": "#kuchnie" },
+    { "label": "Szafy i garderoby", "href": "#szafy-i-garderoby" },
+    { "label": "Zabudowy wnętrz", "href": "#zabudowy-wnetrz" },
+    { "label": "Meble wolnostojące", "href": "#meble-wolnostojace" },
+    { "label": "Realizacje", "href": "#realizacje" },
+    { "label": "O nas", "href": "#o-nas" },
+    { "label": "Kontakt", "href": "#kontakt" }
+  ],
+  "footer": {
+    "copyright": "© 2026 J. Becker Mebel. Wszelkie prawa zastrzeżone.",
+    "links": [
+      { "label": "Polityka prywatności", "href": "/polityka-prywatnosci" },
+      { "label": "Cookies", "href": "/cookies" }
+    ]
+  }
+}

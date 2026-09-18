@@ -1,0 +1,24 @@
+---
+import process from '../data/process.json';
+import ProcessIcon from './icons/ProcessIcon.astro';
+---
+
+<section class="container-page py-16 sm:py-20 border-t border-ink/5">
+  <p class="eyebrow mb-4">{process.eyebrow}</p>
+  <h2 class="font-serif text-4xl sm:text-5xl text-ink mb-14 max-w-xl">{process.heading}</h2>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
+    {process.steps.map((step) => (
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full border border-ink/20 text-xs text-ink/70">
+            {step.number}
+          </span>
+          <ProcessIcon name={step.icon} class="h-4 w-4 text-ink/50" />
+        </div>
+        <h3 class="font-serif text-xl text-ink">{step.title}</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">{step.description}</p>
+      </div>
+    ))}
+  </div>
+</section>

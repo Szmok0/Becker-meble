@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "kuchnie",
+      "title": "Kuchnie",
+      "subtitle": "Serce domu",
+      "image": "/images/categories/kuchnie.jpg",
+      "imageAlt": "Nowoczesna kuchnia na wymiar z drewnianymi frontami"
+    },
+    {
+      "id": "szafy-i-garderoby",
+      "title": "Szafy i garderoby",
+      "subtitle": "Porządek na co dzień",
+      "image": "/images/categories/szafy-garderoby.jpg",
+      "imageAlt": "Zabudowa szafy na wymiar"
+    },
+    {
+      "id": "zabudowy-wnetrz",
+      "title": "Zabudowy wnętrz",
+      "subtitle": "Więcej możliwości",
+      "image": "/images/categories/zabudowy-wnetrz.jpg",
+      "imageAlt": "Zabudowa wnęki z oświetleniem LED"
+    },
+    {
+      "id": "meble-wolnostojace",
+      "title": "Meble wolnostojące",
+      "subtitle": "Detal ma znaczenie",
+      "image": "/images/categories/meble-wolnostojace.jpg",
+      "imageAlt": "Drewniana komoda na wymiar"
+    }
+  ]
+}

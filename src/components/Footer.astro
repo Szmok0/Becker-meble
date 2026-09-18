@@ -1,0 +1,14 @@
+---
+import site from '../data/site.json';
+---
+
+<footer class="bg-charcoal text-linen/50 border-t border-linen/10">
+  <div class="container-page flex flex-col sm:flex-row items-center justify-between gap-4 py-6 text-xs">
+    <p>{site.footer.copyright}</p>
+    <div class="flex items-center gap-6">
+      {site.footer.links.map((link) => (
+        <a href={link.href} class="hover:text-linen transition-colors">{link.label}</a>
+      ))}
+    </div>
+  </div>
+</footer>

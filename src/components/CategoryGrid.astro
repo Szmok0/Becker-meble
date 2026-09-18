@@ -1,0 +1,29 @@
+---
+import { items as categories } from '../data/categories.json';
+import site from '../data/site.json';
+
+const hrefFor = (id: string) => site.nav.find((n) => n.href === `#${id}`)?.href ?? `#${id}`;
+---
+
+<section class="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-ink/5">
+  {categories.map((cat) => (
+    <a
+      href={hrefFor(cat.id)}
+      id={cat.id}
+      class="group flex flex-col border-b sm:border-b-0 lg:border-r last:border-r-0 border-ink/5"
+    >
+      <div class="h-[180px] overflow-hidden">
+        <img
+          src={cat.image}
+          alt={cat.imageAlt}
+          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div class="px-6 sm:px-8 py-8 flex flex-col gap-3">
+        <h3 class="font-serif text-2xl text-ink leading-tight">{cat.title}</h3>
+        <p class="eyebrow">{cat.subtitle}</p>
+        <span class="mt-2 text-ink/60 group-hover:text-bark group-hover:translate-x-1 transition-all" aria-hidden="true">&rarr;</span>
+      </div>
+    </a>
+  ))}
+</section>

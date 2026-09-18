@@ -1,0 +1,50 @@
+---
+import contact from '../data/contact.json';
+---
+
+<section id="kontakt" class="bg-charcoal text-linen">
+  <div class="container-page grid lg:grid-cols-2 gap-10 py-16 sm:py-24">
+    <div class="flex flex-col gap-6">
+      <p class="eyebrow !text-linen/50">{contact.eyebrow}</p>
+      <h2 class="font-serif text-4xl sm:text-5xl leading-[1.08] whitespace-pre-line">
+        {contact.heading}
+      </h2>
+      <p class="text-linen/70 leading-relaxed max-w-sm">{contact.paragraph}</p>
+      <a
+        href={contact.ctaHref}
+        class="inline-flex items-center gap-3 bg-linen text-ink px-6 py-4 text-xs tracking-widest2 uppercase w-fit hover:bg-walnut hover:text-linen transition-colors"
+      >
+        {contact.ctaLabel}
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-8">
+      <div class="flex flex-col gap-5 text-sm">
+        <a href={`tel:${contact.phone.replace(/\s/g, '')}`} class="flex items-center gap-3 hover:text-walnut">
+          <span aria-hidden="true">&#9742;</span>
+          {contact.phone}
+        </a>
+        <a href={`mailto:${contact.email}`} class="flex items-center gap-3 hover:text-walnut">
+          <span aria-hidden="true">&#9993;</span>
+          {contact.email}
+        </a>
+        <p class="flex items-center gap-3 text-linen/80">
+          <span aria-hidden="true">&#9679;</span>
+          {contact.location}
+        </p>
+        <span class="h-px w-8 bg-linen/20 my-2"></span>
+        {contact.hours.map((h) => (
+          <div class="flex items-center justify-between gap-6 text-linen/70">
+            <span>{h.days}</span>
+            <span>{h.hours}</span>
+          </div>
+        ))}
+      </div>
+
+      <div class="relative min-h-[220px] overflow-hidden">
+        <img src={contact.image} alt={contact.imageAlt} class="absolute inset-0 h-full w-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>

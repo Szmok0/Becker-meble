@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Od pomysłu do realizacji",
+  "heading": "Przemyślany proces. Najlepsze efekty.",
+  "steps": [
+    {
+      "number": "1",
+      "icon": "chat",
+      "title": "Rozmowa",
+      "description": "Poznajemy Twoje potrzeby, styl życia i przestrzeń."
+    },
+    {
+      "number": "2",
+      "icon": "pencil",
+      "title": "Pomiar",
+      "description": "Precyzyjnie mierzymy i analizujemy możliwości."
+    },
+    {
+      "number": "3",
+      "icon": "cube",
+      "title": "Projekt",
+      "description": "Tworzymy koncepcję i dopracowujemy każdy detal."
+    },
+    {
+      "number": "4",
+      "icon": "gear",
+      "title": "Wykonanie",
+      "description": "Produkujemy z dbałością o jakość i estetykę."
+    },
+    {
+      "number": "5",
+      "icon": "truck",
+      "title": "Montaż",
+      "description": "Profesjonalny montaż i dopracowane wykończenie."
+    }
+  ]
+}

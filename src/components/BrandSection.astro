@@ -1,0 +1,40 @@
+---
+import brand from '../data/brand.json';
+---
+
+<section id="o-nas" class="container-page py-20 sm:py-28">
+  <div class="grid lg:grid-cols-[minmax(0,340px)_1fr_minmax(0,220px)] gap-8 lg:gap-10 items-start">
+    <div class="flex flex-col gap-5">
+      <p class="eyebrow">{brand.eyebrow}</p>
+      <h2 class="font-serif text-4xl sm:text-5xl leading-[1.08] text-ink whitespace-pre-line">
+        {brand.heading}
+      </h2>
+      <p class="text-ink/70 leading-relaxed max-w-sm">{brand.paragraph}</p>
+      <a
+        href={brand.ctaHref}
+        class="inline-flex items-center gap-3 border border-ink/20 px-6 py-3.5 text-xs tracking-widest2 uppercase w-fit hover:border-ink hover:bg-ink hover:text-linen transition-colors"
+      >
+        {brand.ctaLabel}
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+
+    <div class="h-[320px] sm:h-[420px] lg:h-auto lg:self-stretch overflow-hidden">
+      <img src={brand.mainImage} alt={brand.mainImageAlt} class="h-full w-full object-cover" />
+    </div>
+
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center gap-3 text-xs text-stone">
+        <span>{brand.side.number}</span>
+        <span class="h-px w-8 bg-stone/40"></span>
+      </div>
+      <p class="text-xs uppercase tracking-widest2 text-ink/70 leading-relaxed whitespace-pre-line">
+        {brand.side.heading}
+      </p>
+      <div class="h-32 w-24 overflow-hidden">
+        <img src={brand.side.image} alt={brand.side.imageAlt} class="h-full w-full object-cover" />
+      </div>
+      <p class="text-sm text-ink/60 leading-relaxed">{brand.side.text}</p>
+    </div>
+  </div>
+</section>
