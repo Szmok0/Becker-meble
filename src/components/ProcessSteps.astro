@@ -3,9 +3,9 @@ import process from '../data/process.json';
 import ProcessIcon from './icons/ProcessIcon.astro';
 ---
 
-<section class="container-page py-16 sm:py-20 border-t border-ink/5">
+<section class="container-page py-12 sm:py-16 border-t border-ink/5">
   <p class="eyebrow mb-4">{process.eyebrow}</p>
-  <h2 class="font-serif text-4xl sm:text-5xl text-ink mb-14 max-w-xl">{process.heading}</h2>
+  <h2 class="font-serif text-4xl sm:text-5xl text-ink mb-10 max-w-xl">{process.heading}</h2>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
     {process.steps.map((step) => (
