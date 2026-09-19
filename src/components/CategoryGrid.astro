@@ -2,18 +2,26 @@
 import { items as categories } from '../data/categories.json';
 ---
 
-<section id="realizacje" class="container-page">
+<section class="container-page">
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-ink/5">
-    {categories.map((cat) => (
+    {categories.map((cat, i) => (
       <a
         href="#kontakt"
         id={cat.id}
-        class="group flex flex-col border-b sm:border-b-0 lg:border-r last:border-r-0 border-ink/5"
+        class="group relative flex flex-col border-b sm:border-b-0 lg:border-r last:border-r-0 border-ink/5"
       >
+        {i === 0 && (
+          <span class="absolute top-3 left-3 z-10 bg-ink text-linen text-[10px] tracking-widest2 uppercase px-2.5 py-1">
+            Zacznij tutaj
+          </span>
+        )}
         <div class="aspect-[12/5] overflow-hidden">
           <img
             src={cat.image}
             alt={cat.imageAlt}
+            width="512"
+            height="210"
+            loading="lazy"
             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>

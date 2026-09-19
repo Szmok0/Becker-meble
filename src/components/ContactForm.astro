@@ -1,0 +1,58 @@
+---
+import form from '../data/form.json';
+
+const inputClass =
+  'w-full bg-transparent border border-ink/20 px-4 py-3 text-sm text-ink placeholder:text-stone focus:border-ink focus:outline-none transition-colors';
+---
+
+<section class="container-page py-14 sm:py-20 border-t border-ink/5">
+  <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10">
+    <div class="flex flex-col gap-4">
+      <p class="eyebrow">{form.eyebrow}</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-ink leading-tight">{form.heading}</h2>
+      <p class="text-ink/70 leading-relaxed text-sm max-w-sm">{form.paragraph}</p>
+    </div>
+
+    <form
+      name="zapytanie"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/dziekujemy"
+      class="grid sm:grid-cols-2 gap-4 max-w-2xl"
+    >
+      <input type="hidden" name="form-name" value="zapytanie" />
+      <p class="hidden">
+        <label>Nie wypełniaj tego pola: <input name="bot-field" /></label>
+      </p>
+
+      <input class={inputClass} type="text" name="imie" placeholder="Imię i nazwisko" required />
+      <input class={inputClass} type="text" name="kontakt" placeholder="Telefon lub e-mail" required />
+
+      <select class={`${inputClass} sm:col-span-2`} name="kategoria" required>
+        <option value="" disabled selected>Czego dotyczy zapytanie?</option>
+        {form.categories.map((c) => <option value={c}>{c}</option>)}
+      </select>
+
+      <textarea
+        class={`${inputClass} sm:col-span-2`}
+        name="wiadomosc"
+        placeholder="Kilka słów o Twoim projekcie (opcjonalnie)"
+        rows="4"
+      ></textarea>
+
+      <label class="sm:col-span-2 flex items-start gap-3 text-xs text-ink/60 leading-relaxed">
+        <input type="checkbox" name="zgoda" required class="mt-0.5" />
+        <span>{form.consentText}</span>
+      </label>
+
+      <button
+        type="submit"
+        class="sm:col-span-2 inline-flex items-center justify-center gap-3 bg-ink text-linen px-6 py-4 text-xs tracking-widest2 uppercase w-fit hover:bg-bark transition-colors"
+      >
+        {form.submitLabel}
+        <span aria-hidden="true">&rarr;</span>
+      </button>
+    </form>
+  </div>
+</section>

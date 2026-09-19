@@ -1,5 +1,6 @@
 ---
 import contact from '../data/contact.json';
+import ContactIcon from './icons/ContactIcon.astro';
 ---
 
 <section id="kontakt" class="bg-charcoal text-linen">
@@ -22,15 +23,15 @@ import contact from '../data/contact.json';
     <div class="grid sm:grid-cols-2 gap-8">
       <div class="flex flex-col gap-5 text-sm">
         <a href={`tel:${contact.phone.replace(/\s/g, '')}`} class="flex items-center gap-3 hover:text-walnut">
-          <span aria-hidden="true">&#9742;</span>
+          <ContactIcon name="phone" class="h-4 w-4 shrink-0" />
           {contact.phone}
         </a>
         <a href={`mailto:${contact.email}`} class="flex items-center gap-3 hover:text-walnut">
-          <span aria-hidden="true">&#9993;</span>
+          <ContactIcon name="mail" class="h-4 w-4 shrink-0" />
           {contact.email}
         </a>
         <p class="flex items-center gap-3 text-linen/80">
-          <span aria-hidden="true">&#9679;</span>
+          <ContactIcon name="pin" class="h-4 w-4 shrink-0" />
           {contact.location}
         </p>
         <span class="h-px w-8 bg-linen/20 my-2"></span>
@@ -43,7 +44,14 @@ import contact from '../data/contact.json';
       </div>
 
       <div class="relative min-h-[220px] overflow-hidden">
-        <img src={contact.image} alt={contact.imageAlt} class="absolute inset-0 h-full w-full object-cover" />
+        <img
+          src={contact.image}
+          alt={contact.imageAlt}
+          width="678"
+          height="560"
+          loading="lazy"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
       </div>
     </div>
   </div>

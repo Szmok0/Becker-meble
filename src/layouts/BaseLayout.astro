@@ -1,14 +1,50 @@
 ---
 import '../styles/global.css';
 import site from '../data/site.json';
+import contact from '../data/contact.json';
 
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
-const { title, description = site.seoDescription } = Astro.props;
+const { title, description = site.seoDescription, image = '/images/hero/hero-kitchen.jpg' } = Astro.props;
 const pageTitle = title ? `${title} | ${site.brandName}` : `${site.brandName} — ${site.tagline}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site);
+
+const openingHoursSpec = contact.hours.map((h) => {
+  const dayMap: Record<string, string[]> = {
+    'Poniedziałek – Piątek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    Sobota: ['Saturday'],
+  };
+  const [opens, closes] = h.hours.split('–').map((s) => s.trim());
+  return {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: dayMap[h.days] ?? [h.days],
+    opens,
+    closes,
+  };
+});
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: site.brandName,
+  description: site.seoDescription,
+  image: ogImageURL.toString(),
+  telephone: contact.phone,
+  email: contact.email,
+  areaServed: contact.location,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Poznań',
+    addressCountry: 'PL',
+  },
+  openingHoursSpecification: openingHoursSpec,
+  url: canonicalURL.toString(),
+};
 ---
 
 <!doctype html>
@@ -16,15 +52,36 @@ const pageTitle = title ? `${title} | ${site.brandName}` : `${site.brandName} �
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/images/logo/symbol-2d.png" />
+    <meta name="theme-color" content="#F5F0E8" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/images/logo/symbol-2d.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="canonical" href={canonicalURL} />
+
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:site_name" content={site.brandName} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <slot />

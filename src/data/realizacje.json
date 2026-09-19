@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Realizacje",
+  "heading": "Przykładowe realizacje.",
+  "note": "Poniższe zdjęcia to wizualizacje koncepcyjne prezentujące styl i jakość, do których dążymy — nie są to jeszcze zdjęcia konkretnych, zrealizowanych projektów Becker Mebel. Zastąpimy je prawdziwymi realizacjami wraz z pierwszymi zleceniami.",
+  "items": [
+    {
+      "title": "Kuchnia na wymiar",
+      "image": "/images/categories/kuchnie.jpg",
+      "imageAlt": "Nowoczesna kuchnia na wymiar z wyspą"
+    },
+    {
+      "title": "Jadalnia i zabudowa",
+      "image": "/images/brand/brand-main.jpg",
+      "imageAlt": "Jasna jadalnia z drewnianym stołem na wymiar"
+    },
+    {
+      "title": "Szafa i garderoba",
+      "image": "/images/categories/szafy-garderoby.jpg",
+      "imageAlt": "Zabudowa szafy na wymiar"
+    },
+    {
+      "title": "Zabudowa wnętrza",
+      "image": "/images/categories/zabudowy-wnetrz.jpg",
+      "imageAlt": "Zabudowa wnęki z oświetleniem LED"
+    },
+    {
+      "title": "Meble wolnostojące",
+      "image": "/images/categories/meble-wolnostojace.jpg",
+      "imageAlt": "Drewniana komoda na wymiar"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "eyebrow": "Opinie",
+  "heading": "Co mówią klienci.",
+  "googleReviewUrl": "",
+  "items": [
+    {
+      "quote": "Skorzystaliśmy z usług przy realizacji kuchni na wymiar — profesjonalne podejście i dbałość o detale na każdym etapie, od pomiaru po montaż.",
+      "author": "Klient Becker Mebel",
+      "project": "Kuchnia na wymiar",
+      "isPlaceholder": true
+    },
+    {
+      "quote": "Zabudowa garderoby zaprojektowana dokładnie pod nasze potrzeby. Sprawny kontakt i terminowa realizacja.",
+      "author": "Klient Becker Mebel",
+      "project": "Szafa i garderoba",
+      "isPlaceholder": true
+    },
+    {
+      "quote": "Solidne wykonanie i uczciwe doradztwo na etapie projektu. Polecamy.",
+      "author": "Klient Becker Mebel",
+      "project": "Zabudowa wnętrza",
+      "isPlaceholder": true
+    }
+  ]
+}

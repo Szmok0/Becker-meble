@@ -20,7 +20,14 @@ import brand from '../data/brand.json';
     </div>
 
     <div class="h-[320px] sm:h-[420px] lg:h-auto lg:self-stretch overflow-hidden">
-      <img src={brand.mainImage} alt={brand.mainImageAlt} class="h-full w-full object-cover" />
+      <img
+        src={brand.mainImage}
+        alt={brand.mainImageAlt}
+        width="800"
+        height="550"
+        loading="lazy"
+        class="h-full w-full object-cover"
+      />
     </div>
 
     <div class="flex flex-col gap-6">
@@ -32,7 +39,14 @@ import brand from '../data/brand.json';
         {brand.side.heading}
       </p>
       <div class="h-32 w-24 overflow-hidden">
-        <img src={brand.side.image} alt={brand.side.imageAlt} class="h-full w-full object-cover" />
+        <img
+          src={brand.side.image}
+          alt={brand.side.imageAlt}
+          width="258"
+          height="234"
+          loading="lazy"
+          class="h-full w-full object-cover"
+        />
       </div>
       <p class="text-sm text-ink/60 leading-relaxed">{brand.side.text}</p>
     </div>

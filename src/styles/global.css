@@ -12,6 +12,14 @@
   [id] {
     scroll-margin-top: 6rem;
   }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid theme('colors.walnut');
+    outline-offset: 2px;
+  }
 }
 
 @layer utilities {
