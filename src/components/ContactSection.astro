@@ -21,7 +21,7 @@ import ContactIcon from './icons/ContactIcon.astro';
     </div>
 
     <div class="grid sm:grid-cols-2 gap-8">
-      <div class="flex flex-col gap-5 text-sm">
+      <div class="flex flex-col justify-center gap-5 text-sm">
         <a href={`tel:${contact.phone.replace(/\s/g, '')}`} class="flex items-center gap-3 hover:text-walnut">
           <ContactIcon name="phone" class="h-4 w-4 shrink-0" />
           {contact.phone}
@@ -34,21 +34,14 @@ import ContactIcon from './icons/ContactIcon.astro';
           <ContactIcon name="pin" class="h-4 w-4 shrink-0" />
           {contact.location}
         </p>
-        <span class="h-px w-8 bg-linen/20 my-2"></span>
-        {contact.hours.map((h) => (
-          <div class="flex items-center justify-between gap-6 text-linen/70">
-            <span>{h.days}</span>
-            <span>{h.hours}</span>
-          </div>
-        ))}
       </div>
 
       <div class="relative min-h-[220px] overflow-hidden">
         <img
           src={contact.image}
           alt={contact.imageAlt}
-          width="678"
-          height="560"
+          width="1200"
+          height="1200"
           loading="lazy"
           class="absolute inset-0 h-full w-full object-cover"
         />

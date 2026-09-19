@@ -3,18 +3,18 @@ import site from '../data/site.json';
 ---
 
 <header class="sticky top-0 z-50 bg-linen/95 backdrop-blur border-b border-ink/5">
-  <div class="container-page flex items-center justify-between h-20">
-    <a href="#top" class="flex items-center gap-3 shrink-0">
+  <div class="container-page flex items-center justify-between h-24 sm:h-28">
+    <a href="#top" class="flex items-center gap-4 shrink-0">
       <img
         src="/images/logo/symbol.png"
         alt={`${site.brandName} — symbol`}
-        class="h-10 w-10 object-contain"
+        class="h-14 sm:h-16 w-auto object-contain"
       />
       <span class="leading-tight">
-        <span class="block font-sans font-semibold tracking-wide text-sm sm:text-base text-ink">
+        <span class="block font-sans font-semibold tracking-wide text-base sm:text-lg text-ink">
           {site.brandName.toUpperCase()}
         </span>
-        <span class="block font-sans text-[10px] sm:text-xs tracking-widest2 text-stone">
+        <span class="block font-sans text-[11px] sm:text-xs tracking-widest2 text-stone">
           {site.tagline.toUpperCase()}
         </span>
       </span>

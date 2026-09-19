@@ -7,10 +7,6 @@
   "phone": "+48 600 123 456",
   "email": "kontakt@beckermebel.pl",
   "location": "Poznań i okolice",
-  "hours": [
-    { "days": "Poniedziałek – Piątek", "hours": "8:00 – 17:00" },
-    { "days": "Sobota", "hours": "8:00 – 13:00" }
-  ],
   "image": "/images/contact/contact-photo.jpg",
-  "imageAlt": "Logo Becker Mebel na ciemnej ścianie pracowni"
+  "imageAlt": "Logo Becker Mebel na ścianie"
 }

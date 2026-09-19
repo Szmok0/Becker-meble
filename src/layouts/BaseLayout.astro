@@ -14,20 +14,6 @@ const pageTitle = title ? `${title} | ${site.brandName}` : `${site.brandName} �
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(image, Astro.site);
 
-const openingHoursSpec = contact.hours.map((h) => {
-  const dayMap: Record<string, string[]> = {
-    'Poniedziałek – Piątek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    Sobota: ['Saturday'],
-  };
-  const [opens, closes] = h.hours.split('–').map((s) => s.trim());
-  return {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: dayMap[h.days] ?? [h.days],
-    opens,
-    closes,
-  };
-});
-
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
@@ -42,7 +28,6 @@ const jsonLd = {
     addressLocality: 'Poznań',
     addressCountry: 'PL',
   },
-  openingHoursSpecification: openingHoursSpec,
   url: canonicalURL.toString(),
 };
 ---

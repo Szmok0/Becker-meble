@@ -130,12 +130,6 @@ collections:
           - { label: "Telefon", name: "phone", widget: "string" }
           - { label: "E-mail", name: "email", widget: "string" }
           - { label: "Lokalizacja", name: "location", widget: "string" }
-          - label: "Godziny otwarcia"
-            name: "hours"
-            widget: "list"
-            fields:
-              - { label: "Dni", name: "days", widget: "string" }
-              - { label: "Godziny", name: "hours", widget: "string" }
           - { label: "Zdjęcie", name: "image", widget: "image" }
           - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
 
