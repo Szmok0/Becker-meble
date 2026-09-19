@@ -45,28 +45,31 @@ Hero, 4 kategorie, sekcja "Rzemiosło" i galeria Realizacje używają teraz **pr
 - **zdjęcia** — przez panel `/admin` (opisane niżej) albo ręcznie w `public/images/...` + aktualizacja ścieżki w odpowiednim pliku JSON. Sekcja Realizacje (`src/data/realizacje.json`, pole `items`) nie ma limitu liczby zdjęć — nowe pozycje dodane przez panel same dołączą się do siatki.
 - **logo** — po otrzymaniu plików wektorowych (SVG/AI) podmień pliki w `public/images/logo/` (najlepiej wyeksportować z wektora te same warianty: `symbol.png`, `symbol-light.png`, `lockup-dark.png`, `lockup-light.png`, `symbol-3d.jpg`, `symbol-2d.png`/`favicon-32.png`).
 
-## Konfiguracja panelu treści (Netlify)
+## Konfiguracja panelu treści
 
-Panel działa w oparciu o **Netlify Identity + Git Gateway** — to jedyne kroki, które trzeba wykonać ręcznie w panelu Netlify (raz, po pierwszym deployu):
+Panel (Sveltia CMS) loguje się bezpośrednio do GitHuba — **nie** przez Netlify Identity/Git Gateway (ta ścieżka jest przestarzała i Sveltia CMS jej już nie obsługuje, mimo że tak bywa opisywana w starszych poradnikach). Są dwie opcje logowania do wyboru; wystarczy jedna:
 
-1. Wdróż repo na [Netlify](https://app.netlify.com) (New site from Git → wybierz to repozytorium, branch `main`, build command i publish dir są już ustawione w `netlify.toml`).
-2. W ustawieniach strony: **Site configuration → Identity → Enable Identity**.
-3. Tamże: **Identity → Services → Git Gateway → Enable Git Gateway** (to on pozwala panelowi commitować zmiany do repo w Twoim imieniu, bez udostępniania tokenów GitHub).
-4. **Identity → Invite users** — zaproś swój e-mail (np. jacek@mocpartnerstwa.pl). Dostaniesz maila z linkiem do ustawienia hasła.
-5. Wejdź na `https://twoja-domena/admin/`, zaloguj się e-mailem i hasłem ustawionym w kroku 4.
+### Opcja A — logowanie przez GitHub (zalecane, dla stałego użytku)
+
+Wymaga jednorazowej rejestracji małej aplikacji OAuth na GitHubie i wpięcia jej do Netlify (Netlify pełni rolę pośrednika w logowaniu, bez potrzeby własnego serwera):
+
+1. Wdróż repo na [Netlify](https://app.netlify.com) (New site from Git → to repozytorium, branch `main` — build command i publish dir są już ustawione w `netlify.toml`).
+2. Na GitHubie: **Settings → Developer settings → OAuth Apps → New OAuth App**.
+   - Homepage URL: adres Twojej strony na Netlify (np. `https://becker-mebel.netlify.app`)
+   - Authorization callback URL: `https://api.netlify.com/auth/done`
+3. Po utworzeniu skopiuj **Client ID** i **Client Secret**.
+4. W Netlify: **Site configuration → Access control → OAuth** (czasem sekcja nazywa się podobnie) → dodaj dostawcę **GitHub**, wklej Client ID i Secret.
+5. Wejdź na `https://twoja-domena/admin/` i kliknij **„Sign In with GitHub"**.
+
+### Opcja B — token dostępu (szybsze na start, jedna osoba)
+
+Na GitHubie: **Settings → Developer settings → Personal access tokens** → wygeneruj token z uprawnieniem do repo. Na `/admin/` kliknij **„Sign In Using Access Token"** i wklej token. Zero konfiguracji w Netlify, ale token trzeba samemu bezpiecznie przechowywać i w razie potrzeby odświeżyć/unieważnić na GitHubie.
 
 Od tego momentu edycja treści/zdjęć w `/admin` = commit do repo = automatyczny redeploy strony. Panel jest używany rzadko, więc to jednorazowa konfiguracja.
 
-### Edycja lokalna (opcjonalnie, bez Netlify)
+### Edycja lokalna (bez logowania, bez Netlify)
 
-Panel ma włączone `local_backend: true` w `public/admin/config.yml`. Żeby edytować treści lokalnie przed wdrożeniem:
-
-```bash
-npx netlify-cms-proxy-server &
-npm run dev
-```
-
-i wejdź na `http://localhost:4321/admin/` — zmiany zapiszą się bezpośrednio w plikach na dysku (bez logowania).
+Na `/admin/` jest przycisk **„Work with Local Repository"** (działa w Chrome/Edge dzięki File System Access API) — po kliknięciu wskazujesz folder z lokalnym sklonowanym repo, a panel czyta i zapisuje pliki bezpośrednio na dysku, bez logowania i bez żadnego dodatkowego serwera. Wystarczy mieć uruchomione `npm run dev` i otworzyć `http://localhost:4321/admin/`.
 
 ## Co dalej (poza zakresem tego etapu)
 
