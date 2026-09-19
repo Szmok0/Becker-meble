@@ -8,31 +8,29 @@ const focusClass: Record<string, string> = {
 };
 ---
 
-<section class="container-page">
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-ink/5">
+<section class="container-page py-4">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
     {categories.map((cat, i) => (
       <a
         href="#kontakt"
         id={cat.id}
-        class="group relative flex flex-col border-b sm:border-b-0 lg:border-r last:border-r-0 border-ink/5"
+        class="group relative overflow-hidden aspect-[3/4]"
       >
         {i === 0 && (
           <span class="absolute top-3 left-3 z-10 bg-ink text-linen text-[10px] tracking-widest2 uppercase px-2.5 py-1">
             Zacznij tutaj
           </span>
         )}
-        <div class="aspect-[12/5] overflow-hidden">
-          <img
-            src={cat.image}
-            alt={cat.imageAlt}
-            loading="lazy"
-            class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[cat.focus] ?? 'object-center'}`}
-          />
-        </div>
-        <div class="px-6 sm:px-8 pt-5 pb-7 flex flex-col">
-          <h3 class="font-serif text-2xl text-ink leading-tight">{cat.title}</h3>
-          <p class="eyebrow mt-1.5">{cat.subtitle}</p>
-          <span class="mt-4 text-ink/60 group-hover:text-bark group-hover:translate-x-1 transition-all" aria-hidden="true">&rarr;</span>
+        <img
+          src={cat.image}
+          alt={cat.imageAlt}
+          loading="lazy"
+          class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[cat.focus] ?? 'object-center'}`}
+        />
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent px-5 pt-10 pb-5">
+          <h3 class="font-serif text-2xl text-linen leading-tight">{cat.title}</h3>
+          <p class="text-linen/70 text-[11px] uppercase tracking-widest2 mt-1">{cat.subtitle}</p>
+          <span class="mt-3 inline-block text-linen/80 group-hover:text-linen group-hover:translate-x-1 transition-all" aria-hidden="true">&rarr;</span>
         </div>
       </a>
     ))}

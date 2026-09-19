@@ -55,10 +55,6 @@ collections:
                 name: "lines"
                 widget: "list"
                 field: { label: "Linia", name: "line", widget: "string" }
-          - label: "Numeracja slajdów"
-            name: "slides"
-            widget: "list"
-            field: { label: "Numer", name: "value", widget: "string" }
 
       - name: "categories"
         label: "Kategorie produktowe (4 kafelki)"
@@ -80,25 +76,16 @@ collections:
                 default: "center"
 
       - name: "brand"
-        label: "Sekcja O firmie / rzemiośle"
+        label: "Sekcja marki (blok kontrastowy)"
         file: "src/data/brand.json"
         fields:
           - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
-          - { label: "Nagłówek (wiele linii)", name: "heading", widget: "text" }
+          - { label: "Nagłówek (kilka krótkich haseł, jedno na linię)", name: "heading", widget: "text" }
           - { label: "Akapit", name: "paragraph", widget: "text" }
-          - { label: "Tekst przycisku CTA", name: "ctaLabel", widget: "string" }
+          - { label: "Tekst przycisku CTA (etykieta dostępności przy strzałce)", name: "ctaLabel", widget: "string" }
           - { label: "Link przycisku CTA", name: "ctaHref", widget: "string" }
-          - { label: "Duże zdjęcie", name: "mainImage", widget: "image" }
-          - { label: "Tekst alternatywny dużego zdjęcia", name: "mainImageAlt", widget: "string" }
-          - label: "Boczna notka"
-            name: "side"
-            widget: "object"
-            fields:
-              - { label: "Numer", name: "number", widget: "string" }
-              - { label: "Nagłówek (wiele linii)", name: "heading", widget: "text" }
-              - { label: "Małe zdjęcie", name: "image", widget: "image" }
-              - { label: "Tekst alternatywny małego zdjęcia", name: "imageAlt", widget: "string" }
-              - { label: "Tekst", name: "text", widget: "text" }
+          - { label: "Zdjęcie", name: "image", widget: "image" }
+          - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
 
       - name: "process"
         label: "Sekcja procesu (5 kroków)"

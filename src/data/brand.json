@@ -1,16 +1,9 @@
 {
   "eyebrow": "Becker Mebel",
-  "heading": "Rzemiosło\nwe współczesnym\nwydaniu.",
-  "paragraph": "Łączymy tradycyjne rzemiosło z nowoczesnym podejściem do projektowania. Tworzymy meble, które są trwałe, funkcjonalne i po prostu dobrze się z nimi żyje.",
-  "ctaLabel": "Poznaj nas",
-  "ctaHref": "#o-nas",
-  "mainImage": "/images/brand/brand-main.jpg",
-  "mainImageAlt": "Nowoczesny hol z drewnianą konsolą na wymiar i lustrem",
-  "side": {
-    "number": "01",
-    "heading": "Naturalne\nmateriały.\nPonadczasowy\ndesign.",
-    "image": "/images/brand/brand-detail.jpg",
-    "imageAlt": "Detal materiałowy — naturalne drewno",
-    "text": "Wierzymy, że jakość tkwi w szczegółach. Dlatego stawiamy na sprawdzone materiały, precyzyjne wykonanie i rozwiązania, które zachowują wartość przez lata."
-  }
+  "heading": "Jakość.\nPrecyzja.\nTrwałość.",
+  "paragraph": "Meble dopasowane do Ciebie, Twojej przestrzeni i codzienności — trwałe materiały i precyzyjne wykonanie, które zostają z Tobą na lata.",
+  "ctaLabel": "Zobacz realizacje",
+  "ctaHref": "#realizacje",
+  "image": "/images/brand/brand-main.jpg",
+  "imageAlt": "Nowoczesny hol z drewnianą konsolą na wymiar i lustrem"
 }

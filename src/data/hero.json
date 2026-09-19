@@ -1,5 +1,5 @@
 {
-  "eyebrow": "Meble, które tworzą\nlepsze dni.",
+  "eyebrow": "Meble, które tworzą lepsze dni.",
   "headline": "Przestrzeń ma\nznaczenie.",
   "description": "Projektujemy i tworzymy meble na wymiar, które naturalnie wpisują się w Twoje życie. Funkcjonalne wnętrza. Rzemiosło. Trwałość.",
   "ctaLabel": "Zobacz realizacje",
@@ -8,6 +8,5 @@
   "imageAlt": "Nowoczesna kuchnia z jadalnią na wymiar, czarne krzesła i lampy wiszące",
   "badge": {
     "lines": ["KUCHNIE", "ZABUDOWY", "MEBLE", "PRZESTRZENIE", "DOPASOWANE", "DO CIEBIE."]
-  },
-  "slides": ["01", "02", "03"]
+  }
 }

@@ -2,53 +2,29 @@
 import brand from '../data/brand.json';
 ---
 
-<section id="o-nas" class="container-page py-14 sm:py-20">
-  <div class="grid lg:grid-cols-[minmax(0,380px)_1fr_minmax(0,200px)] gap-8 lg:gap-10 items-start">
-    <div class="flex flex-col gap-5">
-      <p class="eyebrow">{brand.eyebrow}</p>
-      <h2 class="font-serif text-4xl leading-[1.15] text-ink whitespace-pre-line">
-        {brand.heading}
-      </h2>
-      <p class="text-ink/70 leading-relaxed max-w-sm">{brand.paragraph}</p>
-      <a
-        href={brand.ctaHref}
-        class="inline-flex items-center gap-3 border border-ink/20 px-6 py-3.5 text-xs tracking-widest2 uppercase w-fit hover:border-ink hover:bg-ink hover:text-linen transition-colors"
-      >
-        {brand.ctaLabel}
-        <span aria-hidden="true">&rarr;</span>
-      </a>
-    </div>
+<section id="o-nas" class="grid sm:grid-cols-2">
+  <div class="relative aspect-[4/3] sm:aspect-auto overflow-hidden">
+    <img
+      src={brand.image}
+      alt={brand.imageAlt}
+      width="1400"
+      height="818"
+      loading="lazy"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+  </div>
 
-    <div class="h-[320px] sm:h-[420px] lg:h-auto lg:self-stretch overflow-hidden">
-      <img
-        src={brand.mainImage}
-        alt={brand.mainImageAlt}
-        width="800"
-        height="550"
-        loading="lazy"
-        class="h-full w-full object-cover"
-      />
-    </div>
-
-    <div class="flex flex-col gap-6">
-      <div class="flex items-center gap-3 text-xs text-stone">
-        <span>{brand.side.number}</span>
-        <span class="h-px w-8 bg-stone/40"></span>
-      </div>
-      <p class="text-xs uppercase tracking-widest2 text-ink/70 leading-relaxed whitespace-pre-line">
-        {brand.side.heading}
-      </p>
-      <div class="w-full aspect-square overflow-hidden">
-        <img
-          src={brand.side.image}
-          alt={brand.side.imageAlt}
-          width="258"
-          height="234"
-          loading="lazy"
-          class="h-full w-full object-cover"
-        />
-      </div>
-      <p class="text-sm text-ink/60 leading-relaxed">{brand.side.text}</p>
-    </div>
+  <div class="bg-charcoal text-linen flex flex-col justify-center gap-5 px-8 py-14 sm:px-14 sm:py-16">
+    <p class="eyebrow !text-linen/50">{brand.eyebrow}</p>
+    <h2 class="font-serif text-4xl sm:text-5xl leading-[1.1] whitespace-pre-line">{brand.heading}</h2>
+    <p class="text-linen/70 leading-relaxed max-w-sm">{brand.paragraph}</p>
+    <a
+      href={brand.ctaHref}
+      aria-label={brand.ctaLabel}
+      title={brand.ctaLabel}
+      class="mt-2 flex h-14 w-14 items-center justify-center rounded-full bg-linen text-ink hover:bg-walnut hover:text-linen transition-colors"
+    >
+      <span aria-hidden="true" class="text-lg">&rarr;</span>
+    </a>
   </div>
 </section>
