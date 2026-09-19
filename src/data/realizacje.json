@@ -14,7 +14,7 @@
       "imageAlt": "Kuchnia z czarną wyspą i drewnianymi frontami na wymiar"
     },
     {
-      "title": "Zabudowa pod schodami",
+      "title": "Szafa na poddaszu",
       "image": "/images/realizacje/zabudowa-poddasze-szafa.jpg",
       "imageAlt": "Zabudowa szafy na poddaszu ze skosem"
     },
@@ -87,11 +87,6 @@
       "title": "Kuchnia minimalistyczna",
       "image": "/images/realizacje/kuchnia-minimalistyczna.jpg",
       "imageAlt": "Minimalistyczna kuchnia na wymiar w bieli i czerni"
-    },
-    {
-      "title": "Zabudowa sypialni na poddaszu",
-      "image": "/images/realizacje/sypialnia-poddasze-2.jpg",
-      "imageAlt": "Zabudowa szafy w sypialni na poddaszu z widokiem na balkon"
     }
   ]
 }
