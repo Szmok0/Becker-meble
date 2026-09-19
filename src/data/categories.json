@@ -5,28 +5,32 @@
       "title": "Kuchnie",
       "subtitle": "Serce domu",
       "image": "/images/categories/kuchnie.jpg",
-      "imageAlt": "Nowoczesna kuchnia na wymiar z drewnianymi frontami"
+      "imageAlt": "Nowoczesna kuchnia na wymiar z czarną wyspą i drewnianymi frontami",
+      "focus": "center"
     },
     {
       "id": "szafy-i-garderoby",
       "title": "Szafy i garderoby",
       "subtitle": "Porządek na co dzień",
       "image": "/images/categories/szafy-garderoby.jpg",
-      "imageAlt": "Zabudowa szafy na wymiar"
+      "imageAlt": "Garderoba na wymiar z systemem szuflad i oświetleniem LED",
+      "focus": "center"
     },
     {
       "id": "zabudowy-wnetrz",
       "title": "Zabudowy wnętrz",
       "subtitle": "Więcej możliwości",
       "image": "/images/categories/zabudowy-wnetrz.jpg",
-      "imageAlt": "Zabudowa wnęki z oświetleniem LED"
+      "imageAlt": "Zabudowa schodów z oświetleniem i półkami",
+      "focus": "center"
     },
     {
       "id": "meble-wolnostojace",
       "title": "Meble wolnostojące",
       "subtitle": "Detal ma znaczenie",
       "image": "/images/categories/meble-wolnostojace.jpg",
-      "imageAlt": "Drewniana komoda na wymiar"
+      "imageAlt": "Drewniana zabudowa z czarną szafką na wymiar",
+      "focus": "bottom"
     }
   ]
 }

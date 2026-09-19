@@ -39,10 +39,10 @@ npm run preview   # podgląd builda produkcyjnego
 
 ## Stan zdjęć i logo (ważne)
 
-Zdjęcia wnętrz i logo widoczne obecnie na stronie to **placeholdery** wycięte z przekazanego mockupu — mają wypełnić layout do czasu dostarczenia prawdziwych zdjęć realizacji i finalnego wektorowego logo (patrz `docs/branding/BECKER_MEBEL_LOGO_MASTER_SPEC.md`, sekcja 19 „Decision Log” — master wektorowy i finalne kolory nie są jeszcze zamknięte).
+Hero, 4 kategorie, sekcja "Rzemiosło" i galeria Realizacje używają teraz **prawdziwych zdjęć realizacji Becker Mebel** (dostarczonych przez klienta, lekko ujednoliconych stylistycznie). Logo wciąż jest **placeholderem** wyciętym z przekazanego mockupu — czeka na finalny plik wektorowy (patrz `docs/branding/BECKER_MEBEL_LOGO_MASTER_SPEC.md`, sekcja 19 „Decision Log” — master wektorowy i finalne kolory nie są jeszcze zamknięte).
 
 Żeby podmienić:
-- **zdjęcia** — przez panel `/admin` (opisane niżej) albo ręcznie w `public/images/...` + aktualizacja ścieżki w odpowiednim pliku JSON,
+- **zdjęcia** — przez panel `/admin` (opisane niżej) albo ręcznie w `public/images/...` + aktualizacja ścieżki w odpowiednim pliku JSON. Sekcja Realizacje (`src/data/realizacje.json`, pole `items`) nie ma limitu liczby zdjęć — nowe pozycje dodane przez panel same dołączą się do siatki.
 - **logo** — po otrzymaniu plików wektorowych (SVG/AI) podmień pliki w `public/images/logo/` (najlepiej wyeksportować z wektora te same warianty: `symbol.png`, `symbol-light.png`, `lockup-dark.png`, `lockup-light.png`, `symbol-3d.jpg`, `symbol-2d.png`/`favicon-32.png`).
 
 ## Konfiguracja panelu treści (Netlify)

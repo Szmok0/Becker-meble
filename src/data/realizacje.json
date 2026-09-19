@@ -1,32 +1,97 @@
 {
   "eyebrow": "Realizacje",
-  "heading": "Przykładowe realizacje.",
-  "note": "Poniższe zdjęcia to wizualizacje koncepcyjne prezentujące styl i jakość, do których dążymy — nie są to jeszcze zdjęcia konkretnych, zrealizowanych projektów Becker Mebel. Zastąpimy je prawdziwymi realizacjami wraz z pierwszymi zleceniami.",
+  "heading": "Nasze realizacje.",
+  "note": "",
   "items": [
     {
-      "title": "Kuchnia na wymiar",
+      "title": "Kuchnia z marmurowym backsplashem",
+      "image": "/images/realizacje/kuchnia-grafit-marmur.jpg",
+      "imageAlt": "Kuchnia w grafitowych frontach z marmurowym backsplashem na wymiar"
+    },
+    {
+      "title": "Kuchnia z czarną wyspą",
       "image": "/images/categories/kuchnie.jpg",
-      "imageAlt": "Nowoczesna kuchnia na wymiar z wyspą"
+      "imageAlt": "Kuchnia z czarną wyspą i drewnianymi frontami na wymiar"
     },
     {
-      "title": "Jadalnia i zabudowa",
-      "image": "/images/brand/brand-main.jpg",
-      "imageAlt": "Jasna jadalnia z drewnianym stołem na wymiar"
+      "title": "Zabudowa pod schodami",
+      "image": "/images/realizacje/zabudowa-poddasze-szafa.jpg",
+      "imageAlt": "Zabudowa szafy na poddaszu ze skosem"
     },
     {
-      "title": "Szafa i garderoba",
-      "image": "/images/categories/szafy-garderoby.jpg",
-      "imageAlt": "Zabudowa szafy na wymiar"
+      "title": "Garderoba, wnętrze",
+      "image": "/images/realizacje/garderoba-wnetrze.jpg",
+      "imageAlt": "Wnętrze garderoby na wymiar z systemem organizacji"
     },
     {
-      "title": "Zabudowa wnętrza",
-      "image": "/images/categories/zabudowy-wnetrz.jpg",
-      "imageAlt": "Zabudowa wnęki z oświetleniem LED"
+      "title": "Kuchnia w stylu klasycznym",
+      "image": "/images/realizacje/kuchnia-klasyczna.jpg",
+      "imageAlt": "Kuchnia na wymiar w stylu klasycznym z przeszklonymi frontami"
     },
     {
-      "title": "Meble wolnostojące",
-      "image": "/images/categories/meble-wolnostojace.jpg",
-      "imageAlt": "Drewniana komoda na wymiar"
+      "title": "Pokój dziecięcy",
+      "image": "/images/realizacje/pokoj-dzieciecy.jpg",
+      "imageAlt": "Meble na wymiar do pokoju dziecięcego, łóżko z biurkiem"
+    },
+    {
+      "title": "Zabudowa przedpokoju",
+      "image": "/images/realizacje/przedpokoj-siedzisko.jpg",
+      "imageAlt": "Zabudowa przedpokoju z siedziskiem na wymiar"
+    },
+    {
+      "title": "Garderoba narożna z lustrem",
+      "image": "/images/realizacje/garderoba-lustro.jpg",
+      "imageAlt": "Garderoba narożna na wymiar z dużym lustrem"
+    },
+    {
+      "title": "Zabudowa sypialni na poddaszu",
+      "image": "/images/realizacje/sypialnia-poddasze.jpg",
+      "imageAlt": "Zabudowa szafy w sypialni na poddaszu"
+    },
+    {
+      "title": "Kuchnia w zieleni",
+      "image": "/images/realizacje/kuchnia-zielona.jpg",
+      "imageAlt": "Kuchnia na wymiar w kolorze zielonym z jadalnią"
+    },
+    {
+      "title": "Kuchnia biała, detal",
+      "image": "/images/realizacje/kuchnia-biala-detal.jpg",
+      "imageAlt": "Detal białej kuchni na wymiar z marmurowym blatem"
+    },
+    {
+      "title": "Kuchnia biała, wieczorem",
+      "image": "/images/realizacje/kuchnia-biala-wieczor.jpg",
+      "imageAlt": "Biała kuchnia na wymiar z drewnianym blatem, oświetlenie wieczorne"
+    },
+    {
+      "title": "Kuchnia w szarości",
+      "image": "/images/realizacje/kuchnia-szara-dzien.jpg",
+      "imageAlt": "Kuchnia na wymiar w odcieniach szarości, widok z okna"
+    },
+    {
+      "title": "Kuchnia w stylu kremowym",
+      "image": "/images/realizacje/kuchnia-kremowa.jpg",
+      "imageAlt": "Kuchnia na wymiar w kolorze kremowym z drewnianym blatem"
+    },
+    {
+      "title": "Kuchnia, widok z okna",
+      "image": "/images/realizacje/kuchnia-szara-okno.jpg",
+      "imageAlt": "Kuchnia na wymiar z zabudową lodówki i widokiem z okna"
+    },
+    {
+      "title": "Kuchnia biała, parapet",
+      "image": "/images/realizacje/kuchnia-biala-parapet.jpg",
+      "imageAlt": "Biała kuchnia na wymiar z parapetem pełnym kwiatów"
+    },
+    {
+      "title": "Kuchnia minimalistyczna",
+      "image": "/images/realizacje/kuchnia-minimalistyczna.jpg",
+      "imageAlt": "Minimalistyczna kuchnia na wymiar w bieli i czerni"
+    },
+    {
+      "title": "Zabudowa sypialni na poddaszu",
+      "image": "/images/realizacje/sypialnia-poddasze-2.jpg",
+      "imageAlt": "Zabudowa szafy w sypialni na poddaszu z widokiem na balkon"
     }
   ]
 }

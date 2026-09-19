@@ -76,6 +76,11 @@ collections:
               - { label: "Podtytuł", name: "subtitle", widget: "string" }
               - { label: "Zdjęcie", name: "image", widget: "image" }
               - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
+              - label: "Kadrowanie zdjęcia (który fragment pokazać w wąskim kafelku)"
+                name: "focus"
+                widget: "select"
+                options: ["top", "center", "bottom"]
+                default: "center"
 
       - name: "brand"
         label: "Sekcja O firmie / rzemiośle"
@@ -143,9 +148,10 @@ collections:
         fields:
           - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
           - { label: "Nagłówek", name: "heading", widget: "string" }
-          - label: "Zastrzeżenie pod nagłówkiem (usuń, gdy dodasz prawdziwe realizacje)"
+          - label: "Opcjonalne zastrzeżenie pod nagłówkiem (zostaw puste, jeśli niepotrzebne)"
             name: "note"
             widget: "text"
+            required: false
           - label: "Realizacje"
             name: "items"
             widget: "list"

@@ -1,5 +1,11 @@
 ---
 import { items as categories } from '../data/categories.json';
+
+const focusClass: Record<string, string> = {
+  top: 'object-top',
+  center: 'object-center',
+  bottom: 'object-bottom',
+};
 ---
 
 <section class="container-page">
@@ -19,10 +25,8 @@ import { items as categories } from '../data/categories.json';
           <img
             src={cat.image}
             alt={cat.imageAlt}
-            width="512"
-            height="210"
             loading="lazy"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[cat.focus] ?? 'object-center'}`}
           />
         </div>
         <div class="px-6 sm:px-8 pt-5 pb-7 flex flex-col">
