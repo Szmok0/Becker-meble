@@ -137,6 +137,12 @@ collections:
               - { label: "Tytuł / opis", name: "title", widget: "string" }
               - { label: "Zdjęcie", name: "image", widget: "image" }
               - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
+              - label: "Kadrowanie zdjęcia (który fragment pokazać w kafelku)"
+                name: "focus"
+                widget: "select"
+                options: ["top", "center", "bottom"]
+                default: "center"
+                required: false
 
       - name: "testimonials"
         label: "Sekcja Opinie"

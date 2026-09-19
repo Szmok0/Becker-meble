@@ -5,8 +5,8 @@ const starPath =
   'M12 2.5l2.9 6 6.6.8-4.8 4.6 1.2 6.6-5.9-3.1-5.9 3.1 1.2-6.6-4.8-4.6 6.6-.8 2.9-6z';
 ---
 
-<section id="opinie" class="container-page py-14 sm:py-20 border-t border-ink/5">
-  <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+<section id="opinie" class="container-page py-12 sm:py-16 border-t border-ink/5">
+  <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
     <div>
       <p class="eyebrow mb-4">{testimonials.eyebrow}</p>
       <h2 class="font-serif text-4xl sm:text-5xl text-ink max-w-xl">{testimonials.heading}</h2>
@@ -31,11 +31,11 @@ const starPath =
     </div>
   </div>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
     {testimonials.items.map((t) => (
-      <div class="relative flex flex-col gap-4 border border-ink/10 p-6 sm:p-8">
+      <div class="relative flex flex-col gap-2.5 border border-ink/10 p-4 sm:p-5">
         {t.isPlaceholder && (
-          <span class="absolute top-3 right-3 text-[9px] tracking-widest2 uppercase text-stone/70 border border-stone/30 px-2 py-0.5">
+          <span class="absolute top-2.5 right-2.5 text-[9px] tracking-widest2 uppercase text-stone/70 border border-stone/30 px-2 py-0.5">
             Przykład
           </span>
         )}

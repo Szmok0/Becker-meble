@@ -34,9 +34,10 @@
       "imageAlt": "Meble na wymiar do pokoju dziecięcego, łóżko z biurkiem"
     },
     {
-      "title": "Zabudowa przedpokoju",
-      "image": "/images/realizacje/przedpokoj-siedzisko.jpg",
-      "imageAlt": "Zabudowa przedpokoju z siedziskiem na wymiar"
+      "title": "Zabudowa z drewnianym akcentem",
+      "image": "/images/categories/meble-wolnostojace.jpg",
+      "imageAlt": "Drewniana zabudowa z czarną szafką na wymiar",
+      "focus": "bottom"
     },
     {
       "title": "Garderoba narożna z lustrem",
@@ -69,9 +70,9 @@
       "imageAlt": "Kuchnia na wymiar w odcieniach szarości, widok z okna"
     },
     {
-      "title": "Kuchnia w stylu kremowym",
-      "image": "/images/realizacje/kuchnia-kremowa.jpg",
-      "imageAlt": "Kuchnia na wymiar w kolorze kremowym z drewnianym blatem"
+      "title": "Kuchnia z jadalnią",
+      "image": "/images/hero/hero-kitchen.jpg",
+      "imageAlt": "Kuchnia z jadalnią na wymiar, czarne krzesła i lampy wiszące"
     },
     {
       "title": "Kuchnia, widok z okna",
