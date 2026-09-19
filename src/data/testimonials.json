@@ -1,25 +1,44 @@
 {
   "eyebrow": "Opinie",
   "heading": "Co mówią klienci.",
-  "googleReviewUrl": "",
+  "ratingSummary": "5.0 na Google · 8 opinii",
+  "googleReviewUrl": "https://www.google.com/maps/place/Becker+Mebel.+Us%C5%82ugi+dla+stolarstwa.+Becker+J./@52.320015,16.8139337,7871m/data=!3m1!1e3!4m10!1m2!2m1!1sstolarz+backer++!3m6!1s0x47044fd7e1af7a55:0x7e81527092696cf7!8m2!3d52.320015!4d16.8541348!15sCg5zdG9sYXJ6IGJhY2tlcloQIg5zdG9sYXJ6IGJhY2tlcpIBF2tpdGNoZW5fZnVybml0dXJlX3N0b3JlmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJwa00xbHJPSGRpTTNCRVdqQlJkMU5zVlRCYU1FcENVMGhXYldWRlJSQULgAQD6AQUI8AEQSQ!16s%2Fg%2F1tg2c5wc",
   "items": [
     {
-      "quote": "Skorzystaliśmy z usług przy realizacji kuchni na wymiar — profesjonalne podejście i dbałość o detale na każdym etapie, od pomiaru po montaż.",
-      "author": "Klient Becker Mebel",
+      "quote": "Pan Jacek wykonuje dla nas wszystkie prace stolarskie od bardzo wielu lat. Wykonywał zabudowę kuchni, ubikacji, łazienki, szafę z drzwiami przesuwnymi. Nigdy się nie zawiedliśmy, wszystko wykonane bardzo starannie i w pełni profesjonalnie.",
+      "author": "Piotr Szczodrzyński",
+      "project": "Kuchnia, łazienka, szafy",
+      "isPlaceholder": false
+    },
+    {
+      "quote": "Bardzo fachowo wykonana kuchnia. Z wielką starannością i dokładnością. Kuchnia jest dokładnie taka jak chciałam, dodatkowo Pan Jacek doradził mi kilka rozwiązań, o których nie pomyślałam, a są super. Polecam każdemu.",
+      "author": "Żaneta Woźny",
       "project": "Kuchnia na wymiar",
-      "isPlaceholder": true
+      "isPlaceholder": false
     },
     {
-      "quote": "Zabudowa garderoby zaprojektowana dokładnie pod nasze potrzeby. Sprawny kontakt i terminowa realizacja.",
-      "author": "Klient Becker Mebel",
-      "project": "Szafa i garderoba",
-      "isPlaceholder": true
+      "quote": "Profesjonalne i indywidualne podejście do klienta. Całościowo podchodzi do zamówienia — od pomysłu, przez omówienie wariantów oraz wykonanie projektu, po realizację. Polecam.",
+      "author": "Natalia Krekora",
+      "project": "Kuchnia i zabudowy",
+      "isPlaceholder": false
     },
     {
-      "quote": "Solidne wykonanie i uczciwe doradztwo na etapie projektu. Polecamy.",
-      "author": "Klient Becker Mebel",
-      "project": "Zabudowa wnętrza",
-      "isPlaceholder": true
+      "quote": "Nowoczesny design, najlepsze dodatki, fachowa pomoc w doborze rozwiązań. Lite drewno i nie tylko.",
+      "author": "Klaudia",
+      "project": "Kuchnia na wymiar",
+      "isPlaceholder": false
+    },
+    {
+      "quote": "Polecam usługi Pana Jacka — bardzo profesjonalne podejście do projektów, zawsze służy radą i podpowie sprawdzone rozwiązania.",
+      "author": "Beata Nawrocka",
+      "project": "Usługi stolarskie",
+      "isPlaceholder": false
+    },
+    {
+      "quote": "Polecam gorąco, jakość i terminowość na najwyższym poziomie.",
+      "author": "Sylwia Perz",
+      "project": "Usługi stolarskie",
+      "isPlaceholder": false
     }
   ]
 }

@@ -160,7 +160,8 @@ collections:
         fields:
           - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
           - { label: "Nagłówek", name: "heading", widget: "string" }
-          - { label: "Link do wystawienia opinii Google (opcjonalnie)", name: "googleReviewUrl", widget: "string", required: false }
+          - { label: "Podsumowanie oceny (np. \"5.0 na Google · 8 opinii\")", name: "ratingSummary", widget: "string", required: false }
+          - { label: "Link do wizytówki Google (opcjonalnie)", name: "googleReviewUrl", widget: "string", required: false }
           - label: "Opinie"
             name: "items"
             widget: "list"
