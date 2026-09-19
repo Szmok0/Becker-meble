@@ -9,6 +9,9 @@
   body {
     @apply bg-linen text-ink font-sans antialiased;
   }
+  [id] {
+    scroll-margin-top: 6rem;
+  }
 }
 
 @layer utilities {

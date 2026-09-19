@@ -1,15 +1,12 @@
 ---
 import { items as categories } from '../data/categories.json';
-import site from '../data/site.json';
-
-const hrefFor = (id: string) => site.nav.find((n) => n.href === `#${id}`)?.href ?? `#${id}`;
 ---
 
-<section class="container-page">
+<section id="realizacje" class="container-page">
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-ink/5">
     {categories.map((cat) => (
       <a
-        href={hrefFor(cat.id)}
+        href="#kontakt"
         id={cat.id}
         class="group flex flex-col border-b sm:border-b-0 lg:border-r last:border-r-0 border-ink/5"
       >
