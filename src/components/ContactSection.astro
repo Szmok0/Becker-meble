@@ -3,48 +3,87 @@ import contact from '../data/contact.json';
 import ContactIcon from './icons/ContactIcon.astro';
 ---
 
-<section id="kontakt" class="bg-charcoal text-linen">
-  <div class="container-page grid lg:grid-cols-2 gap-10 py-14 sm:py-20">
-    <div class="flex flex-col gap-6">
-      <p class="eyebrow !text-linen/50">{contact.eyebrow}</p>
-      <h2 class="font-serif text-4xl sm:text-5xl leading-[1.08] whitespace-pre-line">
+<section id="kontakt" class="border-t border-ink/5">
+  <div class="hidden sm:block relative min-h-[480px] lg:min-h-[560px] overflow-hidden">
+    <img
+      src={contact.image}
+      alt={contact.imageAlt}
+      width="2000"
+      height="667"
+      loading="lazy"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <div class="relative h-full container-page flex items-center justify-end">
+      <div class="w-full max-w-md lg:max-w-lg flex flex-col gap-6 [text-shadow:0_1px_3px_rgba(250,247,242,0.9),0_0_20px_rgba(250,247,242,0.85)]">
+        <p class="eyebrow">{contact.eyebrow}</p>
+        <h2 class="font-serif text-4xl lg:text-5xl leading-[1.08] text-ink whitespace-pre-line">
+          {contact.heading}
+        </h2>
+        <p class="text-ink/70 leading-relaxed max-w-sm">{contact.paragraph}</p>
+        <a
+          href={contact.ctaHref}
+          class="inline-flex items-center gap-3 bg-ink text-linen px-6 py-4 text-xs tracking-widest2 uppercase w-fit hover:bg-walnut transition-colors"
+        >
+          {contact.ctaLabel}
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+
+        <div class="flex flex-col gap-3 text-sm mt-2">
+          <a href={`tel:${contact.phone.replace(/\s/g, '')}`} class="flex items-center gap-3 text-ink hover:text-walnut">
+            <ContactIcon name="phone" class="h-4 w-4 shrink-0" />
+            {contact.phone}
+          </a>
+          <a href={`mailto:${contact.email}`} class="flex items-center gap-3 text-ink hover:text-walnut">
+            <ContactIcon name="mail" class="h-4 w-4 shrink-0" />
+            {contact.email}
+          </a>
+          <p class="flex items-center gap-3 text-ink/70">
+            <ContactIcon name="pin" class="h-4 w-4 shrink-0" />
+            {contact.location}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sm:hidden">
+    <div class="relative aspect-[2000/667]">
+      <img
+        src={contact.image}
+        alt={contact.imageAlt}
+        width="2000"
+        height="667"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+    </div>
+    <div class="container-page py-10 flex flex-col gap-6">
+      <p class="eyebrow">{contact.eyebrow}</p>
+      <h2 class="font-serif text-3xl leading-[1.1] text-ink whitespace-pre-line">
         {contact.heading}
       </h2>
-      <p class="text-linen/70 leading-relaxed max-w-sm">{contact.paragraph}</p>
+      <p class="text-ink/70 leading-relaxed">{contact.paragraph}</p>
       <a
         href={contact.ctaHref}
-        class="inline-flex items-center gap-3 bg-linen text-ink px-6 py-4 text-xs tracking-widest2 uppercase w-fit hover:bg-walnut hover:text-linen transition-colors"
+        class="inline-flex items-center gap-3 bg-ink text-linen px-6 py-4 text-xs tracking-widest2 uppercase w-fit hover:bg-walnut transition-colors"
       >
         {contact.ctaLabel}
         <span aria-hidden="true">&rarr;</span>
       </a>
-    </div>
 
-    <div class="grid sm:grid-cols-2 gap-8">
-      <div class="flex flex-col justify-center gap-5 text-sm">
-        <a href={`tel:${contact.phone.replace(/\s/g, '')}`} class="flex items-center gap-3 hover:text-walnut">
+      <div class="flex flex-col gap-3 text-sm mt-2">
+        <a href={`tel:${contact.phone.replace(/\s/g, '')}`} class="flex items-center gap-3 text-ink hover:text-walnut">
           <ContactIcon name="phone" class="h-4 w-4 shrink-0" />
           {contact.phone}
         </a>
-        <a href={`mailto:${contact.email}`} class="flex items-center gap-3 hover:text-walnut">
+        <a href={`mailto:${contact.email}`} class="flex items-center gap-3 text-ink hover:text-walnut">
           <ContactIcon name="mail" class="h-4 w-4 shrink-0" />
           {contact.email}
         </a>
-        <p class="flex items-center gap-3 text-linen/80">
+        <p class="flex items-center gap-3 text-ink/70">
           <ContactIcon name="pin" class="h-4 w-4 shrink-0" />
           {contact.location}
         </p>
-      </div>
-
-      <div class="relative min-h-[220px] overflow-hidden">
-        <img
-          src={contact.image}
-          alt={contact.imageAlt}
-          width="1200"
-          height="1200"
-          loading="lazy"
-          class="absolute inset-0 h-full w-full object-cover"
-        />
       </div>
     </div>
   </div>

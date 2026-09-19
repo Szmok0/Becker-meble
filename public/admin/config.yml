@@ -119,7 +119,7 @@ collections:
           - { label: "Telefon", name: "phone", widget: "string" }
           - { label: "E-mail", name: "email", widget: "string" }
           - { label: "Lokalizacja", name: "location", widget: "string" }
-          - { label: "Zdjęcie", name: "image", widget: "image" }
+          - { label: "Zdjęcie tła sekcji (szeroki kadr, ok. 2000x667)", name: "image", widget: "image" }
           - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
 
       - name: "realizacje"
