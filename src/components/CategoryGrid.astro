@@ -25,10 +25,10 @@ import { items as categories } from '../data/categories.json';
             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
-        <div class="px-6 sm:px-8 py-8 flex flex-col gap-3">
+        <div class="px-6 sm:px-8 pt-5 pb-7 flex flex-col">
           <h3 class="font-serif text-2xl text-ink leading-tight">{cat.title}</h3>
-          <p class="eyebrow">{cat.subtitle}</p>
-          <span class="mt-2 text-ink/60 group-hover:text-bark group-hover:translate-x-1 transition-all" aria-hidden="true">&rarr;</span>
+          <p class="eyebrow mt-1.5">{cat.subtitle}</p>
+          <span class="mt-4 text-ink/60 group-hover:text-bark group-hover:translate-x-1 transition-all" aria-hidden="true">&rarr;</span>
         </div>
       </a>
     ))}
