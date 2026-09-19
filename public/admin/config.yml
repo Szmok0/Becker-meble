@@ -93,6 +93,8 @@ collections:
         fields:
           - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
           - { label: "Nagłówek", name: "heading", widget: "string" }
+          - { label: "Zdjęcie tła (szeroki kadr, ok. 1672x745)", name: "image", widget: "image" }
+          - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
           - label: "Kroki"
             name: "steps"
             widget: "list"
