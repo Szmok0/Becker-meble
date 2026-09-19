@@ -1,0 +1,125 @@
+---
+interface Item {
+  title: string;
+  image: string;
+  imageAlt: string;
+  focus?: string;
+}
+interface Props {
+  items: Item[];
+}
+const { items } = Astro.props;
+
+const focusClass: Record<string, string> = {
+  top: 'object-top',
+  center: 'object-center',
+  bottom: 'object-bottom',
+};
+---
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3" data-gallery>
+  {items.map((item, i) => (
+    <button
+      type="button"
+      class="group relative aspect-square overflow-hidden"
+      data-index={i}
+      aria-label={`Powiększ zdjęcie: ${item.title}`}
+    >
+      <img
+        src={item.image}
+        alt={item.imageAlt}
+        loading="lazy"
+        class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[item.focus] ?? 'object-center'}`}
+      />
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent px-3 pt-8 pb-2.5">
+        <p class="text-linen text-xs tracking-wide truncate text-left">{item.title}</p>
+      </div>
+    </button>
+  ))}
+</div>
+
+<div
+  id="lightbox"
+  class="hidden fixed inset-0 z-[100] items-center justify-center bg-ink/95 p-4 sm:p-10"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Podgląd zdjęcia"
+>
+  <button
+    type="button"
+    data-lightbox-close
+    aria-label="Zamknij"
+    class="absolute top-4 right-4 sm:top-6 sm:right-6 text-linen/70 hover:text-linen text-3xl leading-none w-10 h-10 flex items-center justify-center"
+  >
+    &times;
+  </button>
+  <button
+    type="button"
+    data-lightbox-prev
+    aria-label="Poprzednie zdjęcie"
+    class="absolute left-2 sm:left-6 text-linen/70 hover:text-linen text-3xl w-12 h-12 flex items-center justify-center"
+  >
+    &larr;
+  </button>
+  <figure class="max-w-4xl w-full max-h-full flex flex-col items-center gap-3">
+    <img data-lightbox-image src="" alt="" class="max-h-[75vh] w-auto object-contain" />
+    <figcaption data-lightbox-caption class="text-linen/80 text-sm tracking-wide"></figcaption>
+  </figure>
+  <button
+    type="button"
+    data-lightbox-next
+    aria-label="Następne zdjęcie"
+    class="absolute right-2 sm:right-6 text-linen/70 hover:text-linen text-3xl w-12 h-12 flex items-center justify-center"
+  >
+    &rarr;
+  </button>
+</div>
+
+<script define:vars={{ photos: items.map((i) => ({ src: i.image, alt: i.imageAlt, title: i.title })) }}>
+  const lightbox = document.getElementById('lightbox');
+  const imgEl = lightbox.querySelector('[data-lightbox-image]');
+  const captionEl = lightbox.querySelector('[data-lightbox-caption]');
+  const closeBtn = lightbox.querySelector('[data-lightbox-close]');
+  let current = 0;
+  let lastFocused = null;
+
+  function show(index) {
+    current = (index + photos.length) % photos.length;
+    const p = photos[current];
+    imgEl.src = p.src;
+    imgEl.alt = p.alt;
+    captionEl.textContent = p.title;
+  }
+
+  function open(index) {
+    lastFocused = document.activeElement;
+    show(index);
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function close() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.querySelectorAll('[data-gallery] [data-index]').forEach((btn) => {
+    btn.addEventListener('click', () => open(Number(btn.dataset.index)));
+  });
+  closeBtn.addEventListener('click', close);
+  lightbox.querySelector('[data-lightbox-prev]').addEventListener('click', () => show(current - 1));
+  lightbox.querySelector('[data-lightbox-next]').addEventListener('click', () => show(current + 1));
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+</script>

@@ -1,51 +1,27 @@
 ---
 import realizacje from '../data/realizacje.json';
+import Gallery from './Gallery.astro';
 
-const focusClass: Record<string, string> = {
-  top: 'object-top',
-  center: 'object-center',
-  bottom: 'object-bottom',
-};
+const preview = realizacje.items.slice(0, 8);
 ---
 
 <section id="realizacje" class="container-page py-14 sm:py-20 border-t border-ink/5">
-  <p class="eyebrow mb-4">{realizacje.eyebrow}</p>
-  <h2 class="font-serif text-4xl sm:text-5xl text-ink mb-10 max-w-xl">{realizacje.heading}</h2>
-  {realizacje.note && (
-    <p class="text-xs text-stone/80 leading-relaxed max-w-2xl mb-10 italic">{realizacje.note}</p>
-  )}
-
-  <div class="flex flex-col gap-4">
-    <div class="grid sm:grid-cols-3 gap-4 h-[240px] sm:h-[320px] lg:h-[400px]">
-      {realizacje.items.slice(0, 2).map((item, i) => (
-        <div class={`group relative overflow-hidden h-full ${i === 0 ? 'sm:col-span-2' : 'sm:col-span-1'}`}>
-          <img
-            src={item.image}
-            alt={item.imageAlt}
-            loading="lazy"
-            class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[item.focus] ?? 'object-center'}`}
-          />
-          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 to-transparent px-5 py-4">
-            <p class="text-linen text-sm tracking-wide">{item.title}</p>
-          </div>
-        </div>
-      ))}
+  <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+    <div>
+      <p class="eyebrow mb-4">{realizacje.eyebrow}</p>
+      <h2 class="font-serif text-4xl sm:text-5xl text-ink max-w-xl">{realizacje.heading}</h2>
+      {realizacje.note && (
+        <p class="text-xs text-stone/80 leading-relaxed max-w-2xl mt-4 italic">{realizacje.note}</p>
+      )}
     </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {realizacje.items.slice(2).map((item) => (
-        <div class="group relative overflow-hidden aspect-[4/3]">
-          <img
-            src={item.image}
-            alt={item.imageAlt}
-            loading="lazy"
-            class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[item.focus] ?? 'object-center'}`}
-          />
-          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 to-transparent px-5 py-4">
-            <p class="text-linen text-sm tracking-wide">{item.title}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+    <a
+      href="/realizacje"
+      class="inline-flex items-center gap-3 border border-ink/20 px-6 py-3.5 text-xs tracking-widest2 uppercase w-fit hover:border-ink hover:bg-ink hover:text-linen transition-colors shrink-0"
+    >
+      Zobacz wszystkie realizacje
+      <span aria-hidden="true">&rarr;</span>
+    </a>
   </div>
+
+  <Gallery items={preview} />
 </section>

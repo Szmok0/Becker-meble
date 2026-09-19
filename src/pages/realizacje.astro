@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Gallery from '../components/Gallery.astro';
+import realizacje from '../data/realizacje.json';
+---
+
+<BaseLayout title="Realizacje">
+  <Header />
+  <main>
+    <section class="container-page pt-10 sm:pt-14 pb-8">
+      <p class="eyebrow mb-4">{realizacje.eyebrow}</p>
+      <h1 class="font-serif text-4xl sm:text-5xl text-ink max-w-xl">{realizacje.heading}</h1>
+      {realizacje.note && (
+        <p class="text-xs text-stone/80 leading-relaxed max-w-2xl mt-4 italic">{realizacje.note}</p>
+      )}
+    </section>
+
+    <section class="container-page pb-16 sm:pb-24">
+      <Gallery items={realizacje.items} />
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -3,7 +3,7 @@
   "headline": "Przestrzeń ma\nznaczenie.",
   "description": "Projektujemy i tworzymy meble na wymiar, które naturalnie wpisują się w Twoje życie. Funkcjonalne wnętrza. Rzemiosło. Trwałość.",
   "ctaLabel": "Zobacz realizacje",
-  "ctaHref": "#realizacje",
+  "ctaHref": "/realizacje",
   "image": "/images/hero/hero-kitchen.jpg",
   "imageAlt": "Nowoczesna kuchnia z jadalnią na wymiar, czarne krzesła i lampy wiszące",
   "badge": {
