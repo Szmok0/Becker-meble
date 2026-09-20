@@ -129,7 +129,7 @@ collections:
         file: "src/data/contact.json"
         fields:
           - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
-          - { label: "Nagłówek (2 linie)", name: "heading", widget: "text" }
+          - { label: "Nagłówek", name: "heading", widget: "text" }
           - { label: "Akapit", name: "paragraph", widget: "text" }
           - { label: "Tekst przycisku CTA", name: "ctaLabel", widget: "string" }
           - { label: "Link przycisku CTA (np. tel:+48...)", name: "ctaHref", widget: "string" }
