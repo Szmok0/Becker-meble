@@ -107,6 +107,20 @@ collections:
               - { label: "Tytuł", name: "title", widget: "string" }
               - { label: "Opis", name: "description", widget: "text" }
 
+      - name: "history"
+        label: "Sekcja Historia (między procesem a opiniami)"
+        file: "src/data/history.json"
+        fields:
+          - { label: "Nadtytuł", name: "eyebrow", widget: "string" }
+          - { label: "Nagłówek (2 linie)", name: "heading", widget: "text" }
+          - label: "Akapity"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Akapit", name: "paragraph", widget: "text" }
+          - { label: "Plakietka (krótkie hasło w rogu)", name: "badge", widget: "string" }
+          - { label: "Zdjęcie tła", name: "image", widget: "image" }
+          - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
+
       - name: "contact"
         label: "Sekcja kontaktowa"
         file: "src/data/contact.json"
