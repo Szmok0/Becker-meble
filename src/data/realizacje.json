@@ -5,88 +5,88 @@
   "items": [
     {
       "title": "Kuchnia z marmurowym backsplashem",
-      "image": "/images/realizacje/kuchnia-grafit-marmur.jpg",
+      "image": "/images/realizacje/01.jpg",
       "imageAlt": "Kuchnia w grafitowych frontach z marmurowym backsplashem na wymiar"
     },
     {
       "title": "Kuchnia z czarną wyspą",
-      "image": "/images/categories/kuchnie.jpg",
+      "image": "/images/categories/01.jpg",
       "imageAlt": "Kuchnia z czarną wyspą i drewnianymi frontami na wymiar"
     },
     {
       "title": "Szafa na poddaszu",
-      "image": "/images/realizacje/zabudowa-poddasze-szafa.jpg",
+      "image": "/images/realizacje/02.jpg",
       "imageAlt": "Zabudowa szafy na poddaszu ze skosem"
     },
     {
       "title": "Garderoba, wnętrze",
-      "image": "/images/realizacje/garderoba-wnetrze.jpg",
+      "image": "/images/realizacje/03.jpg",
       "imageAlt": "Wnętrze garderoby na wymiar z systemem organizacji"
     },
     {
       "title": "Kuchnia w stylu klasycznym",
-      "image": "/images/realizacje/kuchnia-klasyczna.jpg",
+      "image": "/images/realizacje/04.jpg",
       "imageAlt": "Kuchnia na wymiar w stylu klasycznym z przeszklonymi frontami"
     },
     {
       "title": "Pokój dziecięcy",
-      "image": "/images/realizacje/pokoj-dzieciecy.jpg",
+      "image": "/images/realizacje/05.jpg",
       "imageAlt": "Meble na wymiar do pokoju dziecięcego, łóżko z biurkiem"
     },
     {
       "title": "Zabudowa z drewnianym akcentem",
-      "image": "/images/categories/meble-wolnostojace.jpg",
+      "image": "/images/categories/04.jpg",
       "imageAlt": "Drewniana zabudowa z czarną szafką na wymiar",
       "focus": "bottom"
     },
     {
       "title": "Garderoba narożna z lustrem",
-      "image": "/images/realizacje/garderoba-lustro.jpg",
+      "image": "/images/realizacje/06.jpg",
       "imageAlt": "Garderoba narożna na wymiar z dużym lustrem"
     },
     {
       "title": "Zabudowa sypialni na poddaszu",
-      "image": "/images/realizacje/sypialnia-poddasze.jpg",
+      "image": "/images/realizacje/07.jpg",
       "imageAlt": "Zabudowa szafy w sypialni na poddaszu"
     },
     {
       "title": "Kuchnia w zieleni",
-      "image": "/images/realizacje/kuchnia-zielona.jpg",
+      "image": "/images/realizacje/08.jpg",
       "imageAlt": "Kuchnia na wymiar w kolorze zielonym z jadalnią"
     },
     {
       "title": "Kuchnia biała, detal",
-      "image": "/images/realizacje/kuchnia-biala-detal.jpg",
+      "image": "/images/realizacje/09.jpg",
       "imageAlt": "Detal białej kuchni na wymiar z marmurowym blatem"
     },
     {
       "title": "Kuchnia biała, wieczorem",
-      "image": "/images/realizacje/kuchnia-biala-wieczor.jpg",
+      "image": "/images/realizacje/10.jpg",
       "imageAlt": "Biała kuchnia na wymiar z drewnianym blatem, oświetlenie wieczorne"
     },
     {
       "title": "Kuchnia w szarości",
-      "image": "/images/realizacje/kuchnia-szara-dzien.jpg",
+      "image": "/images/realizacje/11.jpg",
       "imageAlt": "Kuchnia na wymiar w odcieniach szarości, widok z okna"
     },
     {
       "title": "Kuchnia z jadalnią",
-      "image": "/images/hero/hero-kitchen.jpg",
+      "image": "/images/hero/01.jpg",
       "imageAlt": "Kuchnia z jadalnią na wymiar, czarne krzesła i lampy wiszące"
     },
     {
       "title": "Kuchnia, widok z okna",
-      "image": "/images/realizacje/kuchnia-szara-okno.jpg",
+      "image": "/images/realizacje/12.jpg",
       "imageAlt": "Kuchnia na wymiar z zabudową lodówki i widokiem z okna"
     },
     {
       "title": "Kuchnia biała, parapet",
-      "image": "/images/realizacje/kuchnia-biala-parapet.jpg",
+      "image": "/images/realizacje/13.jpg",
       "imageAlt": "Biała kuchnia na wymiar z parapetem pełnym kwiatów"
     },
     {
       "title": "Kuchnia minimalistyczna",
-      "image": "/images/realizacje/kuchnia-minimalistyczna.jpg",
+      "image": "/images/realizacje/14.jpg",
       "imageAlt": "Minimalistyczna kuchnia na wymiar w bieli i czerni"
     }
   ]

@@ -9,7 +9,7 @@ interface Props {
   image?: string;
 }
 
-const { title, description = site.seoDescription, image = '/images/hero/hero-kitchen.jpg' } = Astro.props;
+const { title, description = site.seoDescription, image = '/images/hero/01.jpg' } = Astro.props;
 const pageTitle = title ? `${title} | ${site.brandName}` : `${site.brandName} — ${site.tagline}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(image, Astro.site);
