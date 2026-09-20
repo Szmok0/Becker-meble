@@ -1,6 +1,6 @@
 {
   "eyebrow": "Od pomysłu do realizacji",
-  "heading": "Przemyślany proces. Najlepsze efekty.",
+  "heading": "Przemyślany proces.\nNajlepsze efekty.",
   "image": "/images/process/process-visual.jpg",
   "imageAlt": "Od szkicu koncepcyjnego do gotowej kuchni na wymiar",
   "steps": [
@@ -8,31 +8,31 @@
       "number": "1",
       "icon": "chat",
       "title": "Rozmowa",
-      "description": "Poznajemy Twoje potrzeby, styl życia i przestrzeń."
+      "description": "Poznaję Twoje potrzeby, styl życia i przestrzeń."
     },
     {
       "number": "2",
       "icon": "pencil",
       "title": "Pomiar",
-      "description": "Precyzyjnie mierzymy i analizujemy możliwości."
+      "description": "Precyzyjnie mierzę i analizuję możliwości."
     },
     {
       "number": "3",
       "icon": "cube",
       "title": "Projekt",
-      "description": "Tworzymy koncepcję i dopracowujemy każdy detal."
+      "description": "Tworzę koncepcję i dopracowuję każdy detal."
     },
     {
       "number": "4",
       "icon": "gear",
       "title": "Wykonanie",
-      "description": "Produkujemy z dbałością o jakość i estetykę."
+      "description": "Produkuję z dbałością o jakość i estetykę."
     },
     {
       "number": "5",
       "icon": "truck",
       "title": "Montaż",
-      "description": "Profesjonalny montaż i dopracowane wykończenie."
+      "description": "Montuję z dbałością o każdy detal wykończenia."
     }
   ]
 }

@@ -3,17 +3,17 @@ import contact from '../data/contact.json';
 import ContactIcon from './icons/ContactIcon.astro';
 ---
 
-<section id="kontakt" class="border-t border-ink/5">
-  <div class="hidden sm:block relative min-h-[480px] lg:min-h-[560px] overflow-hidden">
+<section id="kontakt" class="container-page py-12 sm:py-16 border-t border-ink/5">
+  <div class="hidden sm:block relative min-h-[420px] lg:min-h-[480px] overflow-hidden">
     <img
       src={contact.image}
       alt={contact.imageAlt}
       width="2000"
       height="667"
       loading="lazy"
-      class="absolute inset-0 h-full w-full object-cover"
+      class="absolute inset-0 h-full w-full object-cover object-left"
     />
-    <div class="relative h-full container-page flex items-center justify-end">
+    <div class="relative h-full flex items-center justify-end px-8 lg:px-12">
       <div class="w-full max-w-md lg:max-w-lg flex flex-col gap-6 [text-shadow:0_1px_3px_rgba(250,247,242,0.9),0_0_20px_rgba(250,247,242,0.85)]">
         <p class="eyebrow">{contact.eyebrow}</p>
         <h2 class="font-serif text-4xl lg:text-5xl leading-[1.08] text-ink whitespace-pre-line">
@@ -46,8 +46,8 @@ import ContactIcon from './icons/ContactIcon.astro';
     </div>
   </div>
 
-  <div class="sm:hidden">
-    <div class="relative aspect-[2000/667]">
+  <div class="sm:hidden flex flex-col gap-8">
+    <div class="relative aspect-[2000/667] overflow-hidden">
       <img
         src={contact.image}
         alt={contact.imageAlt}
@@ -57,7 +57,7 @@ import ContactIcon from './icons/ContactIcon.astro';
         class="absolute inset-0 h-full w-full object-cover"
       />
     </div>
-    <div class="container-page py-10 flex flex-col gap-6">
+    <div class="flex flex-col gap-6">
       <p class="eyebrow">{contact.eyebrow}</p>
       <h2 class="font-serif text-3xl leading-[1.1] text-ink whitespace-pre-line">
         {contact.heading}
