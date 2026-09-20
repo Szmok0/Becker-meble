@@ -1,0 +1,53 @@
+---
+import history from '../data/history.json';
+---
+
+<section class="container-page py-12 sm:py-16 border-t border-ink/5">
+  <div class="flex flex-col sm:flex-row overflow-hidden">
+    <div class="relative h-56 sm:h-auto sm:w-[34%] shrink-0">
+      <img
+        src={history.photoImage}
+        alt={history.photoAlt}
+        width="1060"
+        height="667"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+    </div>
+
+    <div class="relative flex-1">
+      <img
+        src={history.textureImage}
+        alt=""
+        aria-hidden="true"
+        width="860"
+        height="667"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="relative z-10 flex flex-col gap-4 px-6 py-10 sm:px-10 sm:py-14 lg:px-14 max-w-xl">
+        <p class="eyebrow !text-linen/50">{history.eyebrow}</p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-linen whitespace-pre-line">
+          {history.heading}
+        </h2>
+        <div class="flex flex-col gap-3 text-linen/70 text-sm sm:text-[15px] leading-relaxed">
+          {history.paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden lg:flex relative w-[110px] shrink-0 items-end justify-center">
+      <img
+        src={history.woodImage}
+        alt={history.woodAlt}
+        width="180"
+        height="667"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <p class="relative z-10 mb-6 px-2 text-center text-linen/70 text-[9px] uppercase tracking-widest2 leading-relaxed">
+        {history.badge}
+      </p>
+    </div>
+  </div>
+</section>

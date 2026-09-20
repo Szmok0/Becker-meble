@@ -118,8 +118,11 @@ collections:
             widget: "list"
             field: { label: "Akapit", name: "paragraph", widget: "text" }
           - { label: "Plakietka (krótkie hasło w rogu)", name: "badge", widget: "string" }
-          - { label: "Zdjęcie tła", name: "image", widget: "image" }
-          - { label: "Tekst alternatywny zdjęcia", name: "imageAlt", widget: "string" }
+          - { label: "Zdjęcie archiwalne (lewa strona)", name: "photoImage", widget: "image" }
+          - { label: "Tekst alternatywny zdjęcia archiwalnego", name: "photoAlt", widget: "string" }
+          - { label: "Zdjęcie tła pod tekstem (ciemna faktura)", name: "textureImage", widget: "image" }
+          - { label: "Zdjęcie przekroju drewna (prawy pasek)", name: "woodImage", widget: "image" }
+          - { label: "Tekst alternatywny przekroju drewna", name: "woodAlt", widget: "string" }
 
       - name: "contact"
         label: "Sekcja kontaktowa"
