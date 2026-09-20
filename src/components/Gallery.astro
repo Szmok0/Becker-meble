@@ -29,7 +29,7 @@ const focusClass: Record<string, string> = {
         src={item.image}
         alt={item.imageAlt}
         loading="lazy"
-        class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[item.focus] ?? 'object-center'}`}
+        class={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${focusClass[item.focus ?? 'center'] ?? 'object-center'}`}
       />
       <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent px-3 pt-8 pb-2.5">
         <p class="text-linen text-xs tracking-wide truncate text-left">{item.title}</p>
